@@ -10,7 +10,8 @@ $page[ 'title' ] = 'Source' . $page[ 'title_separator' ].$page[ 'title' ];
 
 if (array_key_exists ("id", $_GET)) {
 	$id = $_GET[ 'id' ];
-
+	if(!in_array($id, array("javascript", "fi", "brute","csrf","exec", "sqli","sqli_blind", "upload", "xss_r", "xss_s", "weak_id")))
+		die();
 	$lowsrc = @file_get_contents("./{$id}/source/low.php");
 	$lowsrc = str_replace( array( '$html .=' ), array( 'echo' ), $lowsrc);
 	$lowsrc = highlight_string( $lowsrc, true );
