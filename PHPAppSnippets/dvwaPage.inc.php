@@ -344,7 +344,7 @@ function dvwaHtmlEcho( $pPage ) {
 
 				{$pPage[ 'body' ]}
 				<br /><br />
-				{$messagesHtml}
+				{htmlspecialchars($messagesHtml)}
 
 			</div>
 
