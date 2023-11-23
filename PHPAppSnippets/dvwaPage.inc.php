@@ -352,7 +352,7 @@ function dvwaHtmlEcho( $pPage ) {
 			</div>
 
 			<div id=\"system_info\">
-				{$systemInfoHtml}
+				{htmlspecialchars($systemInfoHtml)}
 			</div>
 
 			<div id=\"footer\">
